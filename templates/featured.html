@@ -1,0 +1,13 @@
+{% block body %}
+<h1>Featured Structures</h1>
+
+<ul>
+    {% for arch_structure in arch_structures %}
+    <li>
+        <a href="/featured/{{ arch_structure.structure_id }}">
+            {{ arch_structure.structure_name }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

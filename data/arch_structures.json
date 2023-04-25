@@ -1,0 +1,103 @@
+[
+    {
+        "structure_name": "Farnsworth House",
+        "structure_type": "Residential Building",
+        "arch_style": "Bauhaus",
+        "year_built": 1951,
+        "arch_firm": null,
+        "architect_name": "Ludwig Mies van der Rohe",
+        "street_address": "14520 River Road",
+        "city": "Plano",
+        "state_or_province": "Illinois",
+        "postal_code": "60545",
+        "country": "United States",
+        "img_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Farnsworth_House_by_Mies_Van_Der_Rohe_-_exterior-8.jpg"
+    },
+    {
+        "structure_name": "Banff Springs Hotel",
+        "structure_type": "Hospitality Building",
+        "arch_style": "Ch\u00E2teauesque",
+        "year_built": 1888,
+        "arch_firm": null,
+        "architect_name": "Bruce Price",
+        "street_address": "405 Spray Avenue",
+        "city": "Banff",
+        "state_or_province": "Alberta",
+        "postal_code": "TIL 1J4",
+        "country": "Canada",
+        "img_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Banff_Spring_Hotel_Alberta_Kim_Payant_02.jpg"
+    },
+    {
+        "structure_name": "Haus am Horn",
+        "structure_type": "Residential Building",
+        "arch_style": "Bauhaus",
+        "year_built": 1923,
+        "arch_firm": null,
+        "architect_name": [
+            "Georg Muche",
+            "Adolf Meyer"
+        ],
+        "street_address": "61 am Horn",
+        "city": "Weimar",
+        "state_or_province": null,
+        "postal_code": "99425",
+        "country": "Germany",
+        "img_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Haus_am_Horn_04.JPG"
+    },
+    {
+        "structure_name": "Ponte City",
+        "structure_type": "Residential Building",
+        "arch_style": "Brutalist",
+        "year_built": 1975,
+        "arch_firm": null,
+        "architect_name": "Manfred Hermer",
+        "street_address": "1 Lily Avenue",
+        "city": "Johannesburg",
+        "state_or_province": null,
+        "postal_code": "2198",
+        "country": "South Africa",
+        "img_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Ponte_City_Apartments_%283464450399%29.jpg"
+    },
+    {
+        "structure_name": "Bruno House",
+        "structure_type": "Residential Building",
+        "arch_style": "Bauhaus",
+        "year_built": 1933,
+        "arch_firm": null,
+        "architect_name": "Wilhelm Ze'ev Haller",
+        "street_address": "3 Strauss Street",
+        "city": "Tel Aviv",
+        "state_or_province": null,
+        "postal_code": "3Q8+X3",
+        "country": "Israel",
+        "img_url": "https://static.dezeen.com/uploads/2016/08/tel-aviv-bauhaus-roundup_dezeen_936_8-852x1066.jpg"
+    },
+    {
+        "structure_name": "Four Seasons Centre for the Performing Arts",
+        "structure_type": "Cultural Building",
+        "arch_style": "Modern",
+        "year_built": 2006,
+        "arch_firm": "Diamond Schmitt",
+        "architect_name": null,
+        "street_address": "145 Queen Street W",
+        "city": "Toronto",
+        "state_or_province": "Ontario",
+        "postal_code": "ON M5H 461",
+        "country": "Canada",
+        "img_url": "https://dsai.ca/wp-content/uploads/four-seasons-centre-city-room-glass-stair-02.jpg"
+    },
+    {
+        "structure_name": "Sydney Opera House",
+        "structure_type": "Cultural Building",
+        "arch_style": "Expressionist",
+        "year_built": 1973,
+        "arch_firm": "Ove Arup & Partners",
+        "architect_name": "J\u00F8rn Utzon",
+        "street_address": "Bennelong Point",
+        "city": "Sydney",
+        "state_or_province": null,
+        "postal_code": "2000",
+        "country": "Australia",
+        "img_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Sydney_Australia._%2821339175489%29.jpg"
+    }
+]

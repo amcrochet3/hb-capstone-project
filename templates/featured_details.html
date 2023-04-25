@@ -1,0 +1,17 @@
+{% block body %}
+<h1>{{ arch_structure.structure_name }}</h1>
+
+<p>
+    <b>Structure Type:</b> {{ arch_structure.structure_type }}<br>
+    <b>Style:</b> {{ arch_structure.arch_style }}<br>
+    {% if arch_structure.year_built is not none %}<b>Year Built:</b> {{ arch_structure.year_built }}<br>{% endif %}
+    {% if arch_structure.architect_name is not none %}<b>Architect: </b> {{ arch_structure.architect_name }}<br>{% endif
+    %}
+    {% if arch_structure.arch_firm is not none %}<b>Firm:</b> {{ arch_structure.arch_firm}}<br>{% endif %}
+    <b>Address: </b> {{ arch_structure.street_address }}, {{ arch_structure.city }}, {% if
+    arch_structure.state_or_province is not none%} {{ arch_structure.state_or_province
+    }},{% endif %} {{ arch_structure.country }}
+</p>
+
+<img src="{{ arch_structure.img_url }}">
+{% endblock %}
