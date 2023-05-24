@@ -1,0 +1,124 @@
+.header {
+    display: flex;
+    align-items: start;
+    margin-left: 15px;
+    margin-bottom: -8px;
+}
+
+h1 {
+    margin-right: 20px;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.title-line {
+    flex-grow: 1;
+    border-top: 1px solid #000;
+    margin-right: 10px;
+}
+
+.panel-heading {
+    font-family: 'Urbanist', sans-serif;
+}
+
+.panel-body {
+    font-family: 'Bitter', serif;
+}
+
+.panel-body ul {
+    padding-left: 40px;
+    margin-top: 0;
+}
+
+.panel {
+    margin: 0;
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    height: 42vh;
+    width: 100%;
+}
+
+.panel-body ul li {
+    padding-left: 10px;
+}
+
+.panel-light {
+    background-color: #f9dc5c;
+}
+
+.panel-dark {
+    background-color: #36393b;
+    color: white;
+}
+
+.panel-orange {
+    background-color: #ec7d10;
+    color: white;
+}
+
+.panel-blue {
+    background-color: #57e2e5;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    margin: 0;
+}
+
+#create-album-btn {
+    background-color: #48cf7a;
+    color: black;
+    border: none;
+}
+
+#submit-structure-btn {
+    background-color: #48cf7a;
+    color: black;
+    border: none;
+    margin-bottom: 3px;
+}
+
+#view-featured-btn {
+    background-color: #48cf7a;
+    color: black;
+    border: none;
+    margin-bottom: 3px;
+}
+
+#view-map-btn {
+    background-color: #48cf7a;
+    color: black;
+    border: none;
+}
+
+#logout-btn {
+    background: none;
+    border: none;
+    color: #3366cc;
+    margin-left: 30px;
+    margin-top: 13px;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.panel-body li .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    border-radius: 4px;
+}

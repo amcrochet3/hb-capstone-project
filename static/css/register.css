@@ -1,0 +1,51 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f2f2f2;
+    background-image: url("/static/img/background-images/color\ squares\ 3.png");
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 50px;
+}
+
+.registration-container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.registration-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.registration-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.registration-container button {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #48cf7a;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}

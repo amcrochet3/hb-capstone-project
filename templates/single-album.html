@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ album.album_name }}</h1>
+<p>{{ album.user.user_id }}'s album</p>
+
+{% for structure in structures %}
+<div>
+    <h2>{{ structure.structure_name }}</h2>
+</div>
+{% endfor %}
+{% endblock %}

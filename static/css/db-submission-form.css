@@ -1,0 +1,67 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #ffffff;
+    background-image: url("/static/img/background-images/circle\ backdrop\ 2.png");
+}
+
+h1 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container input[type="text"],
+.container input[type="password"],
+.container select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.container button[type="submit"] {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #48cf7a;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container button[type="submit"]:hover {
+    background-color: #40b86c;
+}

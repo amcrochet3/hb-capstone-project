@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/create-album.css">
+{% endblock %}
+
+{% block body %}
+<h1>Create a New Album</h1>
+<form action="/create_album/{{ user.user_id }}" method="POST" id="create-album-form">
+    <div class="form-group">
+        <label for="album-name">Album Name:</label>
+        <input type="text" id="album-name" name="album-name" required>
+    </div>
+    <button type="submit">Create Album</button>
+</form>
+{% endblock %}

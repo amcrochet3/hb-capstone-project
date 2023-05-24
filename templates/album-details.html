@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>Album: {{ album.album_name }}</h1>
+
+<h2>Structures in this Album</h2>
+
+{% if album.structures %}
+<ul>
+    {% for structure in album.structures %}
+    <li>
+        <img src="{{ structure.arch_img_file_path }}">
+        {{ structure.structure_name }}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No structures found in this album.</p>
+{% endif %}
+
+{% endblock %}

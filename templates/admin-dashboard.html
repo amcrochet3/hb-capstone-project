@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="/static/css/admin-dashboard.css">
+{% endblock %}
+
+{% block body %}
+<h1>Structure Submissions</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Architectural Style</th>
+        <th>Year Built</th>
+        <th>Architectural Firm</th>
+        <th>Architect Name</th>
+        <th>Street Address</th>
+        <th>City</th>
+        <th>State/Province</th>
+        <th>Postal Code</th>
+        <th>Country</th>
+        <th>Image URL</th>
+        <th>Actions</th>
+    </tr>
+    {% for submission in submissions %}
+    {% if submission.submission_type == 'structure' and submission.status != 'true' and submission.status !=
+    'false' %}
+    <tr id="submission-{{ submission.submission_id }}">
+        <td>{{ submission.submission_id }}</td>
+        <td>{{ submission.user_structure_name }}</td>
+        <td>{{ submission.user_structure_type }}</td>
+        <td>{{ submission.user_arch_style }}</td>
+        <td>{{ submission.user_year_built }}</td>
+        <td>{{ submission.user_arch_firm }}</td>
+        <td>{{ submission.user_architect_name }}</td>
+        <td>{{ submission.user_street_address }}</td>
+        <td>{{ submission.user_city }}</td>
+        <td>{{ submission.user_state_or_province }}</td>
+        <td>{{ submission.user_postal_code }}</td>
+        <td>{{ submission.user_country }}</td>
+        <td><img src="{{ submission.db_upload_file_path }}" height="50px" width="50px"></td>
+        <td>
+            <form onsubmit="handleApprove(event, '{{ submission.submission_id }}')" style="display: inline;">
+                <button>Approve</button>
+            </form>
+            <form onsubmit="handleDeny(event, '{{ submission.submission_id }}')" style="display: inline;">
+                <button>Deny</button>
+            </form>
+        </td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+</table>
+
+<h1>Objective Submissions</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>User Objective</th>
+        <th>Uploaded File Path</th>
+        <th>Actions</th>
+    </tr>
+    {% for submission in submissions %}
+    {% if submission.submission_type == 'objective' and submission.status != 'true' and submission.status !=
+    'false' %}
+    <tr id="submission-{{ submission.submission_id }}">
+        <td>{{ submission.submission_id }}</td>
+        <td>{{ submission.objective_description }}</td>
+        <td>{{ submission.obj_upload_file_path }}</td>
+        <td>
+            <form onsubmit="handleApprove(event, '{{ submission.submission_id }}')" style="display: inline;">
+                <button>Approve</button>
+            </form>
+            <form onsubmit="handleDeny(event, '{{ submission.submission_id }}')" style="display: inline;">
+                <button>Deny</button>
+            </form>
+        </td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+</table>
+
+<script>
+    function handleApprove(event, submissionId) {
+        event.preventDefault();
+
+        fetch(`/admin/approve/${submissionId}`, {
+            method: 'POST'
+        })
+            .then(response => {
+                if (response.ok) {
+                    const submissionRow = document.getElementById(`submission-${submissionId}`);
+                    submissionRow.remove();
+                } else {
+                    console.error('Failed to approve submission.');
+                }
+            })
+            .catch(error => {
+                console.error('Cannot process request:', error);
+            });
+    }
+
+    function handleDeny(event, submissionId) {
+        event.preventDefault();
+
+        fetch(`/admin/deny/${submissionId}`, {
+            method: 'POST'
+        })
+            .then(response => {
+                if (response.ok) {
+                    const submissionRow = document.getElementById(`submission-${submissionId}`);
+                    submissionRow.remove();
+                } else {
+                    console.error('Failed to deny the submission.');
+                }
+            })
+            .catch(error => {
+                console.error('Error occurred while processing the request:', error);
+            });
+    }
+</script>
+{% endblock %}

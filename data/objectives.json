@@ -1,0 +1,17 @@
+[
+    {
+        "objective_id": 1,
+        "objective_description": "Find a Bauhaus structure",
+        "objective_status": false
+    },
+    {
+        "objective_id": 2,
+        "objective_description": "Find a Brutalist structure",
+        "objective_status": false
+    },
+    {
+        "objective_id": 3,
+        "objective_description": "Find a Victorian structure",
+        "objective_status": false
+    }
+]

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/featured-details.css">
+<link rel="stylesheet" href="/static/css/dashboard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<h1>{{ arch_structure.structure_name }}</h1>
+
+<p>
+    <b>Structure Type:</b> {{ arch_structure.structure_type }}<br>
+    <b>Style:</b> {{ arch_structure.arch_style }}<br>
+    {% if arch_structure.year_built is not none %}<b>Year Built:</b> {{ arch_structure.year_built }}<br>{% endif %}
+    {% if arch_structure.architect_name is not none %}<b>Architect: </b> {{ arch_structure.architect_name }}<br>{% endif
+    %}
+    {% if arch_structure.arch_firm is not none %}<b>Firm:</b> {{ arch_structure.arch_firm}}<br>{% endif %}
+    <b>Address: </b> {{ arch_structure.street_address }}, {{ arch_structure.city }}, {% if
+    arch_structure.state_or_province is not none%} {{ arch_structure.state_or_province
+    }},{% endif %} {{ arch_structure.country }}
+</p>
+
+<img src="{{ arch_structure.arch_img_file_path }}">
+
+<form action="/like_structure/{{ arch_structure.structure_id }}" method="POST">
+    <button name="like-button">Like</button>
+</form>
+<form action="/add_to_album/{{ arch_structure.structure_id }}" method="POST">
+    <label for="album-select">Add to Album:</label>
+    <select id="album-select" name="album-id">
+        {% if user.albums is not none %}
+        {% for album in user.albums %}
+        <option value="{{ album.album_id }}">{{ album.album_name }}</option>
+        {% endfor %}
+        {% endif %}
+    </select>
+    <button type="submit" name="album-add-button">Add to Album</button>
+</form>
+{% endblock %}

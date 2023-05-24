@@ -1,0 +1,66 @@
+body {
+    background-color: black;
+    background-image: url("/static/img/background-images/VMC-PwC-YMCA-Tower-facade-detail.jpg");
+    background-position: center top -2in;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 1920px;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+h1 {
+    position: absolute;
+    width: 602px;
+    height: 111px;
+    left: 760px;
+    bottom: 385px;
+
+    font-family: 'Urbanist', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 110px;
+
+    color: #FFFFFF;
+}
+
+#login,
+#register {
+    text-decoration: none;
+}
+
+#login {
+    position: absolute;
+    width: 266px;
+    height: 222px;
+    right: 433px;
+    bottom: 317px;
+
+    font-family: 'Urbanist', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 65px;
+    line-height: 80px;
+
+    color: #FFFFFF;
+}
+
+#register {
+    position: absolute;
+    width: 266px;
+    height: 222px;
+    right: 433px;
+    bottom: 240px;
+
+    font-family: 'Urbanist', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 65px;
+    line-height: 80px;
+
+    color: #FFFFFF;
+}

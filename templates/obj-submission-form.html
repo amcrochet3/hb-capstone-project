@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>submit an objective fulfillment for admin approval</h1>
+
+<form action="/obj_submit" method="POST" enctype="multipart/form-data">
+    <select name="user-obj" id="user-obj">
+        {% for objective in objectives %}
+        <option value="{{ objective.objective_id }}">{{ objective.objective_description }}</option>
+        {% endfor %}
+    </select>
+
+    <input type="hidden" name="submission-type" value="objective">
+
+    <label for="obj-upload">Upload a file of your image here:</label>
+    <input type="file" name="obj-upload" accept="image/*" />
+
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
