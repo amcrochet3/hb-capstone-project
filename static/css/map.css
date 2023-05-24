@@ -1,5 +1,46 @@
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: start;
+    margin-left: 15px;
+    margin-bottom: 11px;
+}
+
+h1 {
+    font-family: 'Urbanist', sans-serif;
+    margin-left: 10px;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.title-line {
+    flex-grow: 1;
+    border-top: 1px solid #000;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin-top: 60px;
+}
+
 .map,
 #map {
-    width: 500px;
-    height: 500px;
+    width: 1300px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,19 +1,24 @@
-{% block head %}<h1>Register</h1>{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/static/css/register.css">
+{% endblock %}
 
 {% block body %}
+<h1>register</h1>
 
-<p>To register, fill out the form below:</p>
+<div class="registration-container">
+    <p>To register, fill out the form below:</p>
 
-<form action="/register" method="POST">
-    <input type="text" name="fname" placeholder="First Name">
-    <input type="text" name="lname" placeholder="Last Name">
-    <br>
-    <br>
-    <input type="text" name="email" placeholder="Email Address">
-    <input type="password" name="password" placeholder="Password">
-    <br>
-    <br>
-    <button type="submit">Register</button>
-</form>
+    <form action="/register" method="POST">
+        <input type="text" name="fname" placeholder="First Name">
+        <input type="text" name="lname" placeholder="Last Name">
+        <br>
+        <br>
+        <input type="text" name="email" placeholder="Email Address">
+        <input type="password" name="password" placeholder="Password">
+        <br>
+        <br>
+        <button type="submit">Register</button>
+    </form>
+</div>
 
 {% endblock %}

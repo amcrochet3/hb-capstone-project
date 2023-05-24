@@ -1,27 +1,66 @@
 function initMap() {
-    const farnsworthHouseCoordinates = {
-        lat: 41.6357653112787,
-        lng: -88.53572671534454
-    };
-
-    const basicMap = new google.maps.Map(document.querySelector('#map'), {
-        center: farnsworthHouseCoordinates,
-        zoom: 10
+    const coords = { lat: 41.6357653112787, lng: -88.5356838 };
+    const basicMap = new google.maps.Map(document.querySelector("#map"), {
+        center: coords,
+        zoom: 3,
     });
 
-    const farnsworthMarker = new google.maps.Marker({
-        position: farnsworthHouseCoordinates,
-        title: 'Farnsworth House',
-        map: basicMap
-    });
+    let markers = [];
+    let currentInfoWindow = null;
 
-    farnsworthMarker.addListener('click', () => {
-        alert('This house is iconic.');
-    });
+    fetch("/map_data")
+        .then((response) => response.json())
+        .then((data) => {
+            const locations = data;
 
-    const farnsworthInfo = new google.maps.InfoWindow({
-        content: '<h1>Edith Farnsworth House</h1>'
-    });
+            for (const location of locations) {
+                const marker = new google.maps.Marker({
+                    title: location.structure_name,
+                    position: { lat: location.lat, lng: location.lng },
+                    map: basicMap,
+                    icon: {
+                        url: "/static/img/marker.svg",
+                        scaledSize: {
+                            width: 30,
+                            height: 30,
+                        },
+                    },
+                });
 
-    farnsworthInfo.open(basicMap, farnsworthMarker);
+                const infoWindow = new google.maps.InfoWindow({
+                    maxWidth: 200,
+                });
+
+                marker.addListener("click", () => {
+                    if (currentInfoWindow) {
+                        currentInfoWindow.close();
+                    }
+
+                    if (currentInfoWindow !== infoWindow) {
+                        const geocoder = new google.maps.Geocoder();
+                        geocoder.geocode({ location: marker.position }, (results) => {
+                            const address = results && results[0] && results[0].formatted_address;
+                            if (address) {
+                                const markerInfo = `
+                    <div id="content">
+                      <h1>${marker.title}</h1>
+                      <p>${address}</p>
+                    </div>
+                  `;
+
+                                infoWindow.setContent(markerInfo);
+                                infoWindow.open(basicMap, marker);
+                                currentInfoWindow = infoWindow;
+                            }
+                        });
+                    } else {
+                        currentInfoWindow = null;
+                    }
+                });
+
+                markers.push(marker);
+            }
+        });
 }
+
+

@@ -1,15 +1,18 @@
-{% block head %}<h1>Login</h1>{% endblock %}
+{% extends 'base.html' %}
+
+{% block head %}
+<h1>login</h1>
+<link rel="stylesheet" href="/static/css/login.css">
+{% endblock %}
 
 {% block body %}
+<div class="login-container">
+    <p>Please log in with your credentials below:</p>
 
-<p>Please log in with your credentials below:</p>
-
-<form action="/login" method="POST">
-    <input type="text" name="email" placeholder="Email Address">
-    <input type="password" name="password" placeholder="password">
-    <br>
-    <br>
-    <button type="submit">Login</button>
-</form>
-
+    <form action="/login" method="POST">
+        <input type="text" name="email" placeholder="Email Address">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+</div>
 {% endblock %}

@@ -1,9 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="static/css/index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+{% endblock %}
+
 {% block body %}
+<h1>arch_way</h1>
 
-<h1>local strucutre</h1>
-
-<a href="/login">login</a>
+<a id="login" href="/login">login</a>
 <br>
-<a href="/register">register</a>
-
+<a id="register" href="/register">register</a>
 {% endblock %}

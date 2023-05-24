@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<h1>Your Albums</h1>
+
+<div class="row">
+    {% for album in albums %}
+    <div class="col-md-4">
+        <div class="card album-card">
+            <img src="" class="card-img-top" alt="Album Image">
+            <div class="card-body">
+                <h5 class="card-title">{{ album.album_name }}</h5>
+                <a href="/album_details/{{ album.album_id }}" class="btn btn-primary">View Album</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

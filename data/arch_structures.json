@@ -11,7 +11,9 @@
         "state_or_province": "Illinois",
         "postal_code": "60545",
         "country": "United States",
-        "img_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Farnsworth_House_by_Mies_Van_Der_Rohe_-_exterior-8.jpg"
+        "arch_img_file_path": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Farnsworth_House_by_Mies_Van_Der_Rohe_-_exterior-8.jpg",
+        "lat": 41.6357653112787,
+        "lng": -88.5356838
     },
     {
         "structure_name": "Banff Springs Hotel",
@@ -23,9 +25,11 @@
         "street_address": "405 Spray Avenue",
         "city": "Banff",
         "state_or_province": "Alberta",
-        "postal_code": "TIL 1J4",
+        "postal_code": null,
         "country": "Canada",
-        "img_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Banff_Spring_Hotel_Alberta_Kim_Payant_02.jpg"
+        "arch_img_file_path": "https://upload.wikimedia.org/wikipedia/commons/3/39/Banff_Spring_Hotel_Alberta_Kim_Payant_02.jpg",
+        "lat": 51.164950965710446,
+        "lng": -115.56187291534455
     },
     {
         "structure_name": "Haus am Horn",
@@ -42,7 +46,9 @@
         "state_or_province": null,
         "postal_code": "99425",
         "country": "Germany",
-        "img_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Haus_am_Horn_04.JPG"
+        "arch_img_file_path": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Haus_am_Horn_04.JPG",
+        "lat": 50.97446291850734,
+        "lng": 11.339361469310928
     },
     {
         "structure_name": "Ponte City",
@@ -56,7 +62,9 @@
         "state_or_province": null,
         "postal_code": "2198",
         "country": "South Africa",
-        "img_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Ponte_City_Apartments_%283464450399%29.jpg"
+        "arch_img_file_path": "https://upload.wikimedia.org/wikipedia/commons/4/43/Ponte_City_Apartments_%283464450399%29.jpg",
+        "lat": -26.19033669878896,
+        "lng": 28.057042971163867
     },
     {
         "structure_name": "Bruno House",
@@ -65,12 +73,14 @@
         "year_built": 1933,
         "arch_firm": null,
         "architect_name": "Wilhelm Ze'ev Haller",
-        "street_address": "3 Strauss Street",
+        "street_address": "64 Ben Yehuda Street",
         "city": "Tel Aviv",
         "state_or_province": null,
-        "postal_code": "3Q8+X3",
+        "postal_code": "63431",
         "country": "Israel",
-        "img_url": "https://static.dezeen.com/uploads/2016/08/tel-aviv-bauhaus-roundup_dezeen_936_8-852x1066.jpg"
+        "arch_img_file_path": "https://static.dezeen.com/uploads/2016/08/tel-aviv-bauhaus-roundup_dezeen_936_8-852x1066.jpg",
+        "lat": 32.08001287808966,
+        "lng": 34.7694486
     },
     {
         "structure_name": "Four Seasons Centre for the Performing Arts",
@@ -82,9 +92,11 @@
         "street_address": "145 Queen Street W",
         "city": "Toronto",
         "state_or_province": "Ontario",
-        "postal_code": "ON M5H 461",
+        "postal_code": null,
         "country": "Canada",
-        "img_url": "https://dsai.ca/wp-content/uploads/four-seasons-centre-city-room-glass-stair-02.jpg"
+        "arch_img_file_path": "https://dsai.ca/wp-content/uploads/four-seasons-centre-city-room-glass-stair-02.jpg",
+        "lat": 43.65125613899954,
+        "lng": -79.38572591534454
     },
     {
         "structure_name": "Sydney Opera House",
@@ -98,6 +110,8 @@
         "state_or_province": null,
         "postal_code": "2000",
         "country": "Australia",
-        "img_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Sydney_Australia._%2821339175489%29.jpg"
+        "arch_img_file_path": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Sydney_Australia._%2821339175489%29.jpg",
+        "lat": -33.855964715032805,
+        "lng": 151.2152967
     }
 ]
